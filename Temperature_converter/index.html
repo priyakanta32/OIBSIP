@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" type="text/css"	href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#convertBtn').on('click', function () {
+        var temperature = parseFloat($('#temperature').val());
+        var unit = $('#unit').val();
+  
+        if (isNaN(temperature)) {
+          alert('Please enter a valid temperature.');
+          return;
+        }
+
+        if (unit === 'celsius') {
+          var fahrenheit = (temperature * 9 / 5) + 32;
+          $('#result').val(fahrenheit.toFixed(2) + ' Fahrenheit');
+        }
+  
+        else if (unit === 'fahrenheit') {
+          var celsius = (temperature - 32) * 5 / 9;
+          $('#result').val(celsius.toFixed(2) + ' Celsius');
+        }
+      });
+      $("#delet").click(function() {
+        $("#temperature, #result ").val(" ");
+    });
+    });
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Temperature Converter</h2>
+    <table>
+      <tr>
+        <th style="text-align: left;">
+    <label for="temperature">Degree:</label><br>
+    <input type="text" id="temperature" placeholder="Enter temperature...">
+      </th>
+      <th style="text-align: left;">
+    <label for="unit">Select Unit:</label><br>
+    <select id="unit">
+      <option value="celsius">Celsius</option>
+      <option value="fahrenheit">Fahrenheit</option>
+    </select>
+  </th>
+  </tr>
+  <tr>
+    <th style="text-align: left;">
+      <label for="result">Result:</label><br>
+      <input type="text" id="result" readonly>
+   
+  </th>
+  <th style="text-align: left;">
+    <button id="convertBtn">Convert</button>
+    <button id="delet" style="color:black; margin-top: 16px; margin-left: 1px;"> Reset </button>
+  </th>
+  </tr>
+  </table>
+  </div>
+
+  </body>
+</html>

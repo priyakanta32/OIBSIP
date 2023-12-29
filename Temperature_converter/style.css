@@ -1,0 +1,44 @@
+body{
+background-image: url('pexels-bri-schneiter-346529.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+    text-align: center;
+    display: flex;
+    height: 100vh;
+}
+.container{
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 32%;
+    margin-left: 34%;
+    margin-top: 7%;
+    height: 340px;
+    background: linear-gradient(to bottom, #3498db, #2c3e50);
+  }
+  h2{
+    color: #bb2bd8; 
+    font-size: 30px; 
+    text-shadow:0 0 20px #ff3300, 0 0 40px #e107ed;
+  }
+  table{
+    margin-left: 70px;
+    width: 380px;
+    height: 220px;
+  }
+  button{
+    background-color: rgb(228, 144, 26);
+    border-radius: 10px;
+    height: 27px;
+
+  }
+  button:hover{
+    background-color: rgb(140, 207, 39);
+    color: whitesmoke;
+  }
+  input[type=text], select{
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 10px 16px;
+    border: 3px solid blue;
+  }
