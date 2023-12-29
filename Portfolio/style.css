@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+header {
+  background:linear-gradient(rgba(0, 0, 255, 0.849),rgba(0, 128, 0, 0.849));
+  height: 100vh;
+}
+.logo{
+  width: 10%;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+.containerr {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 500;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.menu-items {
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  padding: 1rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #f0f0e6;
+  font-size: 1.2rem;
+  padding: 0.3rem;
+}
+
+.menu-items a:hover {
+  border-bottom: 2px solid #1cd8d2;;
+  text-decoration: none;
+  color: orange;
+}
+
+.navbar .logo{
+  order: 1;
+  color: #f0f0e6;
+  font-size: 2rem;
+}
+.home_page .intro {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0ed2ec;
+  width: 100%;
+  text-align: center;
+}
+.intro2{
+  text-align: center;
+}
+.tbl1{
+  width: 30%;
+  height: 90px;
+  margin-left: 42%;
+  overflow-x: auto;
+}
+.th1{
+  text-align:right;
+  padding-right: 4px;
+  width: 40%;
+  height: 35px;
+}
+.td1{
+  text-align: left;
+  padding-left: 2px;
+}
+.about_me{
+  background: linear-gradient(to right,#3498db, #2c3e50);
+}
+.myimg{
+  width: 80%;
+  border-radius: 50%;
+}
+.tbl2{
+  width: 70%;
+  margin-left: 15%;
+  height: 700px;
+  overflow-x: auto;
+}
+.th2{
+padding: 20px;
+}
+.td2{
+  text-align: center;
+}
+
+.my_skill{
+  background:linear-gradient(to bottom,  rgb(45, 45, 159),#317033);
+}
+.tbl3{
+  overflow-x: auto;
+  width: 60%;
+  height: 700px;
+  margin-left: 20%;
+}
+label{
+  color: #7a82fb;
+}
+.my_work{
+  background:linear-gradient(to right,#3498db, #2c3e50) ;
+}
+.tbl4{
+  width: 70%;
+  margin-left: 15%;
+  height: 800px;
+}
+
+.footer{
+  background: #07374a;
+}
+.cont{
+  padding-top: 200px;
+  text-align: center;
+  color: #25b79f;
+}
+.contact_me{
+  text-align: center;
+}
+.social{
+  padding-bottom: 250px;
+}
