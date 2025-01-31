@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        /* Your existing styles go here */
+
+        #weather-info {
+            margin-top: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <h1>Weather App</h1>
+        <form id="location-form">
+            <label for="location">Enter location:</label>
+            <input type="text" id="location" required>
+            <button type="button" onclick="getWeather()">Get Weather</button>
+        </form>
+        <div id="weather-info"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        function getWeather() {
+            const locationInput = $('#location');
+            const weatherInfoDiv = $('#weather-info');
+
+            const location = locationInput.val();
+
+            // Replace 'YOUR_OPENWEATHERMAP_API_KEY' with your actual OpenWeatherMap API key
+            const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${apiKey}&units=metric`;
+
+            $.ajax({
+                url: apiUrl,
+                method: 'GET',
+                success: function(response) {
+                    const weatherDescription = response.weather[0].description;
+                    const temperature = response.main.temp;
+                    const city = response.name;
+
+                    const weatherText = `Weather in ${city}: ${weatherDescription}, Temperature: ${temperature}°C`;
+
+                    weatherInfoDiv.text(weatherText);
+                },
+                error: function(error) {
+                    console.error('Error fetching weather data:', error);
+                    weatherInfoDiv.text('Error fetching weather data. Please try again.');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
